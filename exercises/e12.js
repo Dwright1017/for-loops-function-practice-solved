@@ -6,7 +6,10 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
-
+  var overhundred = [];
+  for (let person of array) {
+    
+  }
 }
 
 
