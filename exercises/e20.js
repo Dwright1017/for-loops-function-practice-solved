@@ -10,8 +10,7 @@ export function separateNamesWithAFromRest(array) {
   var withoutA = [];
   
   for (let person of array) {
-    const name = person.name;
-    let letters = name.split('');
+    let letters = person.split('');
     let hasA = false;
     for (let i=0; i<letters.length; i++) {
       if (letters[i] == 'a') {
@@ -19,9 +18,9 @@ export function separateNamesWithAFromRest(array) {
       } 
     }
     if (hasA == true) {
-      withA.push(person.name);
+      withA.push(person);
     } else {
-      withoutA.push(person.name);
+      withoutA.push(person);
     }
   }
 }

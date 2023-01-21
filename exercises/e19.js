@@ -6,8 +6,14 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-  for (let i=0; i<array.length; i++) {
-    array[i] = array[(array.length-1) - i];
+  let current = 0;
+  let next = array.length - 1;
+  while (current < next) {
+    let position = array[current];
+    array[current] = array[next];
+    array[next] = position;
+    current++;
+    next--;
   }
   return array;
 }

@@ -5,9 +5,26 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
-
+  const WrongBalance = [];
+  for (let person of array) {
+    let difference = sumArray(person.deposits) - sumArray(person.withdrawals);
+    if (difference !== person.balance) {
+      WrongBalance.push(person);
+    } else {
+      null;
+    }
+  }
+  return WrongBalance;
 }
 
 

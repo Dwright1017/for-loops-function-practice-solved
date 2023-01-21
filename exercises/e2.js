@@ -5,9 +5,11 @@
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
   var roots = [];
-  for (let i=0; i<max; i++) {
-    if (Number.isInteger(i^0.5)) {
+  for (let i=0; i<=max; i++) {
+    if (Number.isInteger(Math.sqrt(i))) {
       roots.push(i);
+    } else {
+      null;
     }
   }
   return roots;
