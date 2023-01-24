@@ -7,6 +7,7 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
+  var newstring;
   
 }
 

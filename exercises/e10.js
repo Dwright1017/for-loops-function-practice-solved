@@ -5,11 +5,17 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-  for (let person of array) {
-    if (person.name.includes(letter)) {
-      return person.name;
+  var clientswithletter = [];
+    for (let person of array) {
+      for (let i=0; i<person.name.length; i++) {
+        if (person.name[i] === letter) {
+          clientswithletter.push(person.name);
+        }else {
+          null;
+        }
+      }      
     }
-  }
+  return clientswithletter;
 }
 
 // === TEST YOURSELF ===

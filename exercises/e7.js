@@ -10,9 +10,10 @@ export function getClientWithLeastBalance(array) {
     var count = array[0].balance;
     if (array[i].balance > 0 && array[i].balance < count) {
       count = array[i].balance;
-      return least.push(array[i]);
+      least.push(array[i]);
     }
   }
+  return least;
 }
 
 // === TEST YOURSELF ===

@@ -5,15 +5,17 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-  var allWithdrawals = [];
-  for (let i=0; i < array.length; i++){
+  const withdrawalSums = [];
+
+  for (let person of array) {
     let sum = 0;
-    let withdrawalArray = array[i].withdrawals;
-    for (let amount of withdrawalArray) {
-      sum = sum + amount;
-    }
-    allWithdrawals.push(sum);
+    person.withdrawals ? person.withdrawals.forEach(withdrawal => {
+      sum += withdrawal;
+    }) : null;
+
+    withdrawalSums.push(sum);
   }
+  return withdrawalSums;
 }
 
 // === TEST YOURSELF ===
