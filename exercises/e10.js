@@ -5,17 +5,20 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-  var clientswithletter = [];
+  var clientswithLetter = [];
     for (let person of array) {
-      for (let i=0; i<person.name.length; i++) {
-        if (person.name[i] === letter) {
-          clientswithletter.push(person.name);
-        }else {
-          null;
-        }
-      }      
+      let letters = person.name.split('');
+      let withLetter = false;
+    for (let i=0; i<letters.length; i++) {
+      if (letters[i] == letter) {
+        withLetter = true;
+      }
     }
-  return clientswithletter;
+    if (withLetter == true) {
+      clientswithLetter.push(person.name)
+    }  
+    }
+  return clientswithLetter;
 }
 
 // === TEST YOURSELF ===

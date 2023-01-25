@@ -6,23 +6,23 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-  var withA = [];
-  var withoutA = [];
-  
+  var namesWithA = [];
+  var names = [];
   for (let person of array) {
-    let letters = person.split('');
-    let hasA = false;
+    let letters = [...person];
+    let withA = false;
     for (let i=0; i<letters.length; i++) {
       if (letters[i] == 'a') {
-        hasA = true;
-      } 
+        withA = true;
+      }
     }
-    if (hasA == true) {
-      withA.push(person);
+    if (withA == true) {
+      namesWithA.push(person)
     } else {
-      withoutA.push(person);
+      names.push(person)
     }
   }
+  return [namesWithA, names];
 }
 
 

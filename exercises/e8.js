@@ -16,7 +16,7 @@ export function getClientWithGreatestBalance(array) {
       null;
     }
   }
-  return greatest;
+  return [greatest];
 }
 
 
