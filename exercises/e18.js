@@ -7,8 +7,15 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
-  var newstring;
-  
+  var newstring = '';
+  for (let i=0; i<array.length; i++) {
+    if (i < array.length - 2) {
+      newstring += array[i] + separator;
+    } else {
+      newstring += array[i];
+    }
+  }
+  return newstring;
 }
 
 
