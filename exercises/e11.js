@@ -9,9 +9,11 @@ export function getAllWithdrawals(array) {
 
   for (let person of array) {
     let sum = 0;
-    person.withdrawals ? person.withdrawals.forEach(withdrawal => {
-      sum += withdrawal;
-    }) : null;
+    if (person.withdrawals) {
+      for (let withdrawal of person.withdrawals) {
+        sum += withdrawal
+      }
+    }
 
     withdrawalSums.push(sum);
   }

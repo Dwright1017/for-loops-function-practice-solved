@@ -8,8 +8,10 @@
 export function flatArrays(array) {
   // Your code goes here...
   const newArray = [];
-  for (let i=0; i < array.length; i++) {
-    newArray.push(...array[i]);
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      newArray.push(array[i][j]);
+    }
   }
   return newArray;
 }

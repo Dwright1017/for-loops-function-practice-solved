@@ -11,7 +11,7 @@ export function separateNamesWithAFromRest(array) {
   for (let person of array) {
     let letters = [...person];
     let withA = false;
-    for (let i=0; i<letters.length; i++) {
+    for (let i = 0; i < letters.length; i++) {
       if (letters[i] == 'a') {
         withA = true;
       }
